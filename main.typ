@@ -4,7 +4,7 @@
 #import "template.typ": *
 
 #show: project.with(
-  logopath: "./assert/hitsz_logo.jpg",
+  logopath: "./asset/hitsz_logo.jpg",
   subject: "摸鱼与摸鱼工程",
   labname: "实验一\n系统性摸鱼设计",
   kwargs: (
