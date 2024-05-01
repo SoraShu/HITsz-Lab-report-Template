@@ -25,35 +25,20 @@ Typst 可以说是介于以上两者之间。用它来编写文档上手很快�
 
 安装 Typst 的 cli 工具，具体安装参考 [typst#installation](https://github.com/typst/typst#installation)。
 
-clone 本项目，修改 [main.typ](main.typ) 文件，然后调用 Typst 编译生成 main.pdf。
+clone 本项目，将本项目安装为本地包
 
-```shell
-typst compile main.typ
+```bash
+./install.sh
 ```
 
-或者使用 GNU make
+该脚本默认会将包安装到 `${XDG_DATA_DIR}/typst/packages/${TYPST_LOCAL_NAMESPACE}/hitsz-lab-report-template/${VERSION}`。可以通过 export 对应环境变量的形式自定义该路径。
 
-```shell
-make
+随后可以使用 Typst 自带的模版初始化功能在对应目录下初始化您的项目:
+
+```bash
+# 若您使用了自定义的环境变量, 请自行修改下面的命令
+typst init @local/hitsz-lab-report-template:1.0.0 ${PROJECT_NAME}
 ```
-
-## 字体
-
-在 [template.typ](template.typ) 文件的开头定义了三种字体。
-
-```plaintext
-#let heiti = ("Noto Sans CJK SC", "Times New Roman")
-#let songti = ("Noto Serif CJK SC", "Times New Roman")
-#let mono = ("FiraCode Nerd Font Mono", "Sarasa Mono SC","Courier New", "Courier", "Noto Serif CJK SC")
-```
-
-分别为 黑体(Sans)，宋体(Serif) 和 等距(Mono)。目前硬编码了这三个字体以及 fallback 设置，在使用时可能需要修改，若你没有安装以上字体，通过
-
-```shell
-typst fonts
-```
-
-查看 Typst 目前能使用的所有字体。
 
 ## 说明
 

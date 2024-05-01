@@ -1,0 +1,18 @@
+[package]
+name = "hitsz-lab-report-template"
+version = "1.0.0"
+entrypoint = "lib.typ"
+authors = ["SoraShu"]
+license = "MIT"
+description = "A Typst template for Lab-report in HITsz"
+repository = "https://github.com/SoraShu/HITsz-Lab-report-Template"
+compiler = "0.11.0"
+exclude = ["install.sh", "thumbnail.png"]
+categories = ["report"]
+disciplines = ["computer-science", "education"]
+keywords = ["lab-report", "template", "HITsz"]
+
+[template]
+path = "template"
+entrypoint = "main.typ"
+thumbnail = "thumbnail.png"
