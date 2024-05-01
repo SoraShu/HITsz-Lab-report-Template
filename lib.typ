@@ -1,10 +1,3 @@
-//---------------------------------------------------------------------
-//-------------------------------need to modify------------------------
-#let heiti = ("Noto Sans CJK SC", "Times New Roman")
-#let songti = ("Noto Serif CJK SC", "Times New Roman")
-#let mono = ("FiraCode Nerd Font Mono", "Sarasa Mono SC","Courier New", "Courier", "Noto Serif CJK SC")
-//---------------------------------------------------------------------
-
 // some handly functions
 #let equation_num(_) = {
   locate(loc => {
@@ -77,6 +70,9 @@
   labname: "",
   kwargs: (),
   firstlineindent: 0em,
+  heiti: ("Noto Sans CJK SC", "Times New Roman"),
+  songti: ("Noto Serif CJK SC", "Times New Roman"),
+  mono: ("FiraCode Nerd Font Mono", "Sarasa Mono SC","Courier New", "Courier", "Noto Serif CJK SC"),
   body,
 ) = {
   // 引用的时候，图表公式等的 numbering 会有错误，所以用引用 element 手动查
